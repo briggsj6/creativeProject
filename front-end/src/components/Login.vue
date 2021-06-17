@@ -1,6 +1,7 @@
 <template>
 <div class="hero">
   <div class="heroBox">
+    <p>Please login or register below to begin tracking your habits!</p>
     <form class="pure-form space-above">
       <fieldset>
         <legend>Login</legend>

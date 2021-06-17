@@ -16,13 +16,20 @@
   <router-view />
   <div class="footer">
     <a href="https://github.com/briggsj6/creativeProject" target="blank">GitHub</a>
-    <p>Hours Spent: 7 </p>
+    <p>Hours Spent: 11 </p>
   </div>
 </div>
 </template>
 
 
 <style>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
 #logo {
   padding: 5px;
   font-family: 'Baloo Tammudu 2', cursive;

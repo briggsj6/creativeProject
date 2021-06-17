@@ -72,6 +72,25 @@ router.put("/perf/:id", validUser, async (req, res) => {
   }
 });
 
+router.put("/edit/:id", validUser, async (req, res) => {
+  console.log("You edited a habit");
+  try {
+    let habit = await Habit.findOne({
+      _id: req.params.id
+    });
+    if (!habit) {
+      res.send(404);
+      return;
+    }
+    habit.description = req.body.description;
+    await habit.save();
+    res.send(habit);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
 router.delete("/perf/:id", validUser, async (req, res) => {
   try {
     let habit = await Habit.findOne({
@@ -107,8 +126,9 @@ router.get("/", validUser, async (req, res) => {
 // get shared habits
 router.get("/shared", async (req, res) => {
   try {
-    let habits = await Habit.find().sort({
-      share: true,
+    let habits = await Habit.find({
+      share: true
+    }).sort({
       created: -1
     }).populate('user');
     return res.send(habits);
