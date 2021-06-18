@@ -16,7 +16,7 @@
   <router-view />
   <div class="footer">
     <a href="https://github.com/briggsj6/creativeProject" target="blank">GitHub</a>
-    <p>Hours Spent: 15 </p>
+    <p>Hours Spent: 20 </p>
   </div>
 </div>
 </template>
