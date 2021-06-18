@@ -38,4 +38,7 @@ app.use("/api/users", users.routes);
 const habits = require("./habits.js");
 app.use("/api/habits", habits.routes);
 
+const comments = require("./comments.js");
+app.use("/api/comments", comments.routes);
+
 app.listen(3002, () => console.log('Server listening on port 3002!'));

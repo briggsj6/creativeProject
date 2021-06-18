@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Inspiration from '../views/Inspiration.vue'
+import Comment from '../views/Comment.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [{
     name: 'Inspiration',
     component: Inspiration
   },
+  {
+    path: '/comment/:id',
+    name: 'comment',
+    component: Comment,
+  }
 ]
 
 const router = new VueRouter({

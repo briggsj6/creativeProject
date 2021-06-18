@@ -138,6 +138,21 @@ router.get("/shared", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+
+  try {
+    let habits = await Habit.findOne({
+      _id: req.params.id
+    }).populate('user');
+    return res.send(habits);
+  } catch (error) {
+    console.log(error);
+    return res.sendStatus(500);
+  }
+});
+
+
+
 module.exports = {
   model: Habit,
   routes: router,

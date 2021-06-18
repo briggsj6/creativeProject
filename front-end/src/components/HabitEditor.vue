@@ -70,6 +70,12 @@ export default {
 
 
 <style scoped>
+#addComment {
+  margin: 0px 10px 0px 0px;
+  display: flex;
+  height: 25px;
+}
+
 .toggle {
   display: flex;
   width: 100%;

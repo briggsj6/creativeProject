@@ -5,6 +5,9 @@
     <div class="habit" v-for="habit in habits" v-bind:key="habit._id">
       <div class="habit-head">
         <h3>{{habit.habit}}</h3>
+        <router-link :to="{ name: 'comment', params: { id: habit._id }}">
+          <i class="fas fa-comment"></i>
+        </router-link>
       </div>
       <p>Description: {{habit.description}}</p>
       <p>Days completed: {{habit.performed}}</p>
@@ -44,7 +47,8 @@ export default {
       }
     },
     formatDate(date) {
-      return (moment(date).diff(Date.now(), 'days') + 1);
+      let today = Date.now();
+      return (moment(today).diff(date, 'days') + 1);
     },
     async getHabits() {
       try {
@@ -64,12 +68,19 @@ export default {
 </script>
 
 <style scoped>
+.habit-head {
+  display: flex;
+  width: 100%;
+}
+
 .fas-container {
   margin-left: auto;
 }
 
 .fas {
+  margin-left: auto;
   margin: 8px 0px 5px 10px;
+  color: #2B3542;
 }
 
 .container {

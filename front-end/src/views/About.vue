@@ -7,5 +7,12 @@
     <p>The second reason for building this site came from reading the book <em>Atomic Habits</em>. In this book, I learned the importance of making it easy to accomplish and track your habits. I thought the best way to make habit tracking easy was to
       build a web app that allowed simple, quick, and easy habit tracking. I hope you enjoy tracking your habits on the site and that you find inspiration, support, and accountability through the shared habits page.</p>
   </div>
+  <div class="space"></div>
 </div>
 </template>
+
+<style scoped>
+p {
+  text-align: left;
+}
+</style>

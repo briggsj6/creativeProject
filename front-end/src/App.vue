@@ -16,13 +16,17 @@
   <router-view />
   <div class="footer">
     <a href="https://github.com/briggsj6/creativeProject" target="blank">GitHub</a>
-    <p>Hours Spent: 11 </p>
+    <p>Hours Spent: 15 </p>
   </div>
 </div>
 </template>
 
 
 <style>
+.space {
+  height: 40px;
+}
+
 .container {
   display: flex;
   flex-direction: column;

@@ -110,7 +110,8 @@ export default {
       this.getHabits();
     },
     formatDate(date) {
-      return (moment(date).diff(Date.now(), 'days') + 1);
+      let today = Date.now();
+      return (moment(today).diff(date, 'days') + 1);
     },
     async getHabits() {
       try {
@@ -326,7 +327,7 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     padding-top: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 95%
   }
 
